@@ -1,6 +1,6 @@
 'use client';
 
-import { ComponentShadow } from 'pages/component-overview/shadows';
+import { ComponentShadow } from 'layout/component-overview/shadows';
 
 // ==============================|| SAMPLE PAGE ||============================== //
 

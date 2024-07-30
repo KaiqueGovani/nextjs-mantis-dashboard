@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
+import AppBar, { AppBarProps } from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
+import { useTheme } from '@mui/material/styles';
+import Toolbar from '@mui/material/Toolbar';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 // project import
 import AppBarStyled from './AppBarStyled';
@@ -49,8 +49,15 @@ export default function Header() {
     </Toolbar>
   );
 
+  type appBarProps = {
+    position: AppBarProps['position'];
+    color: AppBarProps['color'];
+    elevation: AppBarProps['elevation'];
+    sx: AppBarProps['sx'];
+  };
+
   // app-bar params
-  const appBar = {
+  const appBar: appBarProps = {
     position: 'fixed',
     color: 'inherit',
     elevation: 0,
@@ -63,7 +70,7 @@ export default function Header() {
   return (
     <>
       {!downLG ? (
-        <AppBarStyled open={!!drawerOpen} {...appBar}>
+        <AppBarStyled theme={theme} open={!!drawerOpen} {...appBar}>
           {mainHeader}
         </AppBarStyled>
       ) : (

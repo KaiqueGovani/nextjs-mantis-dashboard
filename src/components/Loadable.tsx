@@ -1,15 +1,10 @@
-import { ComponentType, Suspense } from 'react';
+import { PropsWithChildren, Suspense } from 'react';
 
 // project import
 import Loader from './Loader';
 
 // ==============================|| LOADABLE - LAZY LOADING ||============================== //
 
-
-const Loadable = <P extends object>(Component: ComponentType<P>): ComponentType<P> => (props: P) => (
-  <Suspense fallback={<Loader />}>
-    <Component {...props} />
-  </Suspense>
-);
+const Loadable = ({ children }: PropsWithChildren) => <Suspense fallback={<Loader />}>{children}</Suspense>;
 
 export default Loadable;

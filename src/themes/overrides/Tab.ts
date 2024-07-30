@@ -1,9 +1,9 @@
 // material-ui
-import { alpha } from '@mui/material/styles';
+import { alpha, Theme } from '@mui/material/styles';
 
 // ==============================|| OVERRIDES - TAB ||============================== //
 
-export default function Tab(theme) {
+export default function Tab(theme: Theme) {
   return {
     MuiTab: {
       styleOverrides: {

@@ -1,7 +1,7 @@
 'use client';
 
 // project import
-import { Register } from 'pages/authentication/register';
+import { Register } from 'layout/authentication/register';
 
 // ==============================|| SAMPLE PAGE ||============================== //
 

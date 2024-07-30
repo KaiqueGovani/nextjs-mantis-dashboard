@@ -1,15 +1,28 @@
 // material-ui
-import { alpha } from '@mui/material/styles';
+import { alpha, Theme } from '@mui/material/styles';
+import { ColorProps } from 'types/extended';
+import { ButtonPropsVariantOverrides } from 'types/overrides/Button';
 import { getColors } from 'utils/getColors';
 import { getShadow } from 'utils/getShadow';
 
 // project import
 
-function getColorStyle({ variant, color, theme }) {
+function getColorStyle({ variant, color, theme }: { variant: ButtonPropsVariantOverrides; color: ColorProps; theme: Theme }) {
   const colors = getColors(theme, color);
   const { lighter, main, dark, darker, contrastText } = colors;
 
-  const buttonShadow = `${color}Button`;
+  const buttonShadow:
+    | 'secondary'
+    | 'error'
+    | 'warning'
+    | 'info'
+    | 'success'
+    | 'primaryButton'
+    | 'secondaryButton'
+    | 'errorButton'
+    | 'warningButton'
+    | 'infoButton'
+    | 'successButton' = `${color}Button`;
   const shadows = getShadow(theme, buttonShadow);
 
   const commonShadow = {
@@ -80,7 +93,7 @@ function getColorStyle({ variant, color, theme }) {
 
 // ==============================|| OVERRIDES - BUTTON ||============================== //
 
-export default function Button(theme) {
+export default function Button(theme: Theme) {
   const primaryDashed = getColorStyle({ variant: 'dashed', color: 'primary', theme });
   const primaryShadow = getColorStyle({ variant: 'shadow', color: 'primary', theme });
 

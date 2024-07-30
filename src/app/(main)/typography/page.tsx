@@ -1,6 +1,6 @@
 'use client';
 
-import { ComponentTypography } from 'pages/component-overview/typography';
+import { ComponentTypography } from 'layout/component-overview/typography';
 
 // ==============================|| SAMPLE PAGE ||============================== //
 

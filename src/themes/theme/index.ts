@@ -1,6 +1,9 @@
 // ==============================|| PRESET THEME - THEME SELECTOR ||============================== //
 
-export default function Theme(colors) {
+import { PalettesProps } from '@ant-design/colors';
+import { PaletteMode } from '@mui/material';
+
+export default function Theme(colors: PalettesProps, presetColor: string, mode: PaletteMode) {
   const { blue, red, gold, cyan, green, grey } = colors;
   const greyColors = {
     0: grey[0],

@@ -1,9 +1,11 @@
 // project import
+import { Theme } from '@mui/material/styles';
+import { ColorProps } from 'types/extended';
 import { getColors } from 'utils/getColors';
 
 // ==============================|| CHIP - COLORS ||============================== //
 
-function getColor({ color, theme }) {
+function getColor({ color, theme }: { color: ColorProps; theme: Theme }) {
   const colors = getColors(theme, color);
   const { dark } = colors;
 
@@ -15,7 +17,7 @@ function getColor({ color, theme }) {
   };
 }
 
-function getColorStyle({ color, theme }) {
+function getColorStyle({ color, theme }: { color: ColorProps; theme: Theme }) {
   const colors = getColors(theme, color);
   const { light, lighter, main } = colors;
 
@@ -34,7 +36,7 @@ function getColorStyle({ color, theme }) {
 
 // ==============================|| OVERRIDES - CHIP ||============================== //
 
-export default function Chip(theme) {
+export default function Chip(theme: Theme) {
   const defaultLightChip = getColorStyle({ color: 'secondary', theme });
   return {
     MuiChip: {

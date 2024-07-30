@@ -8,11 +8,11 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 // project import
+import { SxProps, Theme } from '@mui/system';
 import MainCard from 'components/MainCard';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { MenuItem } from 'types/menu';
-import { SxProps, Theme } from '@mui/system';
 
 type BreadcrumbsProps = {
   navigation: { items: MenuItem[] };
@@ -62,6 +62,7 @@ export default function Breadcrumbs({ navigation, title, ...others }: Breadcrumb
       }
       return false;
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location, navigation]);
 
   // only used for component demo breadcrumbs

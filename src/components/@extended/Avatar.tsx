@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { styled, Theme, useTheme } from '@mui/material/styles';
 import MuiAvatar from '@mui/material/Avatar';
+import { styled, Theme, useTheme } from '@mui/material/styles';
+import { ReactNode } from 'react';
 
 // Custom types
 import { AvatarTypeProps, ColorProps, SizeProps } from 'types/extended';
@@ -9,7 +9,7 @@ import { getColors } from 'utils/getColors';
 interface GetColorStyleProps {
   theme: Theme;
   color: ColorProps;
-  type: AvatarTypeProps;
+  type?: AvatarTypeProps;
 }
 
 function getColorStyle({ theme, color, type }: GetColorStyleProps) {
@@ -92,7 +92,7 @@ function getSizeStyle(size: SizeProps) {
 interface AvatarStyleProps {
   theme: Theme;
   color: ColorProps;
-  type: AvatarTypeProps;
+  type?: AvatarTypeProps;
   size: SizeProps;
 }
 

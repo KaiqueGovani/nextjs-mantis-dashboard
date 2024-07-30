@@ -1,7 +1,7 @@
 'use client';
 
 // project import
-import { Login } from 'pages/authentication/login';
+import { Login } from 'layout/authentication/login';
 
 // ==============================|| SAMPLE PAGE ||============================== //
 

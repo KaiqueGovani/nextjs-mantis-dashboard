@@ -7,10 +7,8 @@ import Stack from '@mui/material/Stack';
 // project import
 import config from 'config';
 import Link from 'next/link';
-import { getEnvConfig } from 'post/config.action';
-import { useEffect } from 'react';
-import Logo from './LogoMain';
 import React from 'react';
+import Logo from './LogoMain';
 
 // ==============================|| MAIN LOGO ||============================== //
 
@@ -20,20 +18,13 @@ type LogoSectionProps = {
 };
 
 export default function LogoSection({ sx, to }: LogoSectionProps) {
-  const [label, setLabel] = React.useState<string>('');
-  useEffect(() => {
-    getEnvConfig().then((env) => {
-      setLabel(env.version);
-    });
-  }, []);
-
   return (
     <Link href={!to ? config.defaultPath : to}>
       <ButtonBase disableRipple sx={sx}>
         <Stack direction="row" spacing={1} alignItems="center">
           <Logo />
           <Chip
-            label={label}
+            label={process.env.NEXT_PUBLIC_APP_VERSION}
             variant="outlined"
             size="small"
             color="secondary"

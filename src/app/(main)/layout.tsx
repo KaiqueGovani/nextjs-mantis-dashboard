@@ -10,12 +10,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 // project import
 import Breadcrumbs from 'components/@extended/Breadcrumbs';
 import Loader from 'components/Loader';
-import navigation from 'menu-items';
 
 import { Theme } from '@mui/material';
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
-import Header from 'layout/Dashboard/Header';
-import Drawer from 'layout/Dashboard/Drawer';
+import Drawer from 'layout/main/Drawer';
+import Header from 'layout/main/Header';
+import menuItems from 'layout/main/menu-items';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -40,7 +40,7 @@ export default function Layout({
       <Drawer />
       <Box component="main" sx={{ width: 'calc(100% - 260px)', flexGrow: 1, p: { xs: 2, sm: 3 } }}>
         <Toolbar />
-        <Breadcrumbs navigation={navigation} title />
+        <Breadcrumbs navigation={menuItems} title />
         {children}
       </Box>
     </Box>

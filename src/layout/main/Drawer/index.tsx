@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemo } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Drawer from '@mui/material/Drawer';

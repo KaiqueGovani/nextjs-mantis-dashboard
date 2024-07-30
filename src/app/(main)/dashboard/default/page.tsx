@@ -1,4 +1,4 @@
-import DashboardDefault from 'pages/dashboard';
+import DashboardDefault from 'layout/dashboard';
 
 export default function DashboardDefaultPage() {
   return <DashboardDefault />;

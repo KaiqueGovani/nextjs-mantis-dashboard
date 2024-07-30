@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as Color from '@mui/material';
 
 declare module '@mui/material' {

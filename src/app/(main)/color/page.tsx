@@ -1,7 +1,7 @@
 'use client';
 
 // project import
-import { ComponentColor }  from 'pages/component-overview/color';
+import { ComponentColor } from 'layout/component-overview/color';
 
 // ==============================|| SAMPLE PAGE ||============================== //
 
