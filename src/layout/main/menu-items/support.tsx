@@ -26,7 +26,7 @@ const support: MenuItem = {
       id: 'documentation',
       title: 'Documentation',
       type: 'item',
-      url: 'https://codedthemes.gitbook.io/mantis/',
+      url: 'https://github.com/KaiqueGovani/nextjs-mantis-dashboard',
       icon: icons.QuestionOutlined,
       external: true,
       target: true

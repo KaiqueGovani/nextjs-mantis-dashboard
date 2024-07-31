@@ -196,7 +196,7 @@ export function ComponentTypography() {
             </MainCard>
             <MainCard title="Link">
               <Stack spacing={1.5}>
-                <Link href="#">www.mantis.com</Link>
+                <Link href="#">https://github.com/KaiqueGovani/nextjs-mantis-dashboard</Link>
                 <Breadcrumbs aria-label="breadcrumb">
                   <Typography variant="h6">Size: 12px</Typography>
                   <Typography variant="h6">Weight: Regular</Typography>
